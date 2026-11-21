@@ -1,0 +1,281 @@
+/* =======================================================
+   Runddelens Tandteknik - fælles stylesheet
+   ======================================================= */
+
+:root{
+  --paper:#FBFAF5;
+  --paper-deep:#E9F1F4;
+  --card:#FFFFFF;
+  --ink:#233240;
+  --ink-soft:#5E717C;
+  --pine:#5B9CB8;
+  --pine-deep:#2E6580;
+  --gold:#D3A868;
+  --line:#DCE6E9;
+  --radius:4px;
+}s
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Source Sans 3", system-ui, sans-serif;
+  font-size:21px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{
+  font-family:"Fraunces", Georgia, serif;
+  color:var(--pine-deep);
+  line-height:1.15;
+  margin:0 0 .5em 0;
+  font-weight:600;
+}
+a{color:var(--pine-deep);}
+img{max-width:100%;display:block;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
+.narrow{max-width:640px;}
+
+/* Skip link */
+.skip-link{
+  position:absolute;left:-999px;top:0;background:var(--pine-deep);color:#fff;
+  padding:12px 20px;z-index:200;border-radius:0 0 var(--radius) 0;
+}
+.skip-link:focus{left:0;}
+
+/* Header */
+header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(251,250,245,.94);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--line);
+}
+.nav-row{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 28px;max-width:1080px;margin:0 auto;
+  gap:20px;
+}
+.brand{
+  display:flex;flex-direction:column;line-height:1.1;text-decoration:none;
+}
+.brand strong{
+  font-family:"Fraunces",serif;font-size:1.32rem;color:var(--pine-deep);font-weight:600;
+}
+.brand span{font-size:.82rem;color:var(--ink-soft);letter-spacing:.02em;}
+nav.primary{display:flex;align-items:center;gap:30px;}
+nav.primary a{
+  text-decoration:none;color:var(--ink);font-size:1rem;font-weight:500;
+  padding:6px 2px;border-bottom:2px solid transparent;
+}
+nav.primary a:hover, nav.primary a:focus-visible{border-bottom-color:var(--gold);}
+nav.primary a.active{border-bottom-color:var(--pine-deep);color:var(--pine-deep);}
+.call-btn{
+  background:var(--pine-deep);color:#fff 
+  !important;padding:12px 22px;border-radius:var(--radius);font-weight:600;border-bottom:none !important;
+  white-space:nowrap;
+}
+.call-btn:hover{background:var(--pine);}
+.menu-toggle{display:none;background:none;border:1px solid var(--line);border-radius:var(--radius);
+  width:44px;height:44px;cursor:pointer;}
+.menu-toggle span{display:block;width:20px;height:2px;background:var(--ink);margin:4px auto;}
+
+/* Hero (forsiden) */
+.hero{padding:76px 0 68px;}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;}
+.eyebrow-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.95rem;color:var(--pine);margin-bottom:18px;font-weight:600;
+}
+.eyebrow-tag svg{width:18px;height:18px;flex:none;}
+.hero h1{font-size:clamp(2.3rem,4.8vw,3.4rem);max-width:14ch;}
+.hero p.lede{font-size:1.35rem;color:var(--ink-soft);max-width:46ch;margin-bottom:30px;}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;}
+  .btn{
+  display:inline-block;padding:18px 30px;border-radius:var(--radius);
+  text-decoration:none;font-weight:600;font-size:1.2rem;border:1px solid transparent;
+}
+.btn-primary{background:var(--pine-deep);color:#fff;}
+.btn-primary:hover{background:var(--pine);}
+.btn-ghost{border-color:var(--pine-deep);color:var(--pine-deep);}
+.btn-ghost:hover{background:var(--paper-deep);}
+.hero-art{position:relative;}
+.hero-art svg{width:100%;height:auto;}
+
+.trust-strip{
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding:22px 0;
+}
+.trust-strip ul{
+  list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:14px 40px;
+  justify-content:space-between;
+}
+.trust-strip li{
+  font-size:1rem;color:var(--ink-soft);display:flex;gap:10px;align-items:flex-start;flex:1 1 200px;
+}
+.trust-strip svg{width:22px;height:22px;flex:none;color:var(--gold);margin-top:2px;}
+
+/* Section shell (bruges på alle sider) */
+section{padding:76px 0;}
+section.alt{background:var(--paper-deep);}
+section.page-header{padding-bottom:0;}
+.section-head{max-width:640px;margin-bottom:44px;}
+.section-head p{color:var(--ink-soft);font-size:1.25rem;}
+.section-kicker{
+  font-family:"Fraunces",serif;font-style:italic;color:var(--gold);font-size:1.05rem;margin-bottom:6px;display:block;
+}
+
+/* Om klinikken */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
+.about-grid p{margin:0 0 18px;color:var(--ink-soft);}
+.about-grid p:last-child{margin-bottom:0;}
+.team{display:flex;flex-direction:column;gap:22px;}
+.team-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px 24px;display:flex;gap:18px;align-items:center;
+}
+.team-photo{
+  width:88px;height:88px;border-radius:8px;flex:none;
+  border:2px dashed var(--pine);background:var(--paper-deep);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  color:var(--pine-deep);gap:4px;overflow:hidden;
+}
+.team-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.team-photo svg{width:26px;height:26px;}
+.team-photo .photo-label{font-size:.66rem;font-weight:700;text-align:center;line-height:1.2;padding:0 4px;}
+.team-card strong{display:block;font-size:1.06rem;color:var(--ink);}
+.team-card span{color:var(--ink-soft);font-size:.94rem;}
+.lkt-note{
+  margin-top:22px;font-size:.95rem;color:var(--ink-soft);
+  border-left:3px solid var(--gold);padding-left:16px;
+}
+
+/* Tandproteser (services) */
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.service-card{
+  background:var(--card);border:2px solid var(--line);border-radius:10px;
+  padding:0;overflow:hidden;box-shadow:0 2px 6px rgba(46,101,128,.06);
+  transition:box-shadow .15s ease, border-color .15s ease, transform .15s ease;
+}
+.service-card:hover, .service-card:focus-within{
+  border-color:var(--pine);box-shadow:0 6px 18px rgba(46,101,128,.14);transform:translateY(-2px);
+}
+.service-card summary{
+  list-style:none;cursor:pointer;padding:24px;display:flex;gap:16px;align-items:center;
+  -webkit-tap-highlight-color:transparent;
+}
+.service-card summary::-webkit-details-marker{display:none;}
+.service-icon{
+  width:40px;height:40px;flex:none;color:var(--pine-deep);
+}
+.service-title{font-family:"Fraunces",serif;font-weight:600;font-size:1.3rem;color:var(--ink);margin-bottom:5px;}
+.service-sub{font-size:1.05rem;color:var(--ink-soft);display:block;margin-bottom:10px;}
+.tap-hint{
+  display:inline-flex;align-items:center;gap:6px;font-size:1rem;font-weight:700;
+  color:var(--pine-deep);background:var(--paper-deep);border-radius:20px;padding:6px 14px 6px 12px;
+}
+.service-body{padding:0 24px 26px 84px;color:var(--ink-soft);font-size:1.15rem;}
+.tap-hint svg{width:14px;height:14px;}
+details[open] .tap-hint .hint-closed{display:none;}
+details:not([open]) .tap-hint .hint-open{display:none;}
+.service-plus{
+  margin-left:auto;flex:none;width:44px;height:44px;border-radius:50%;
+  background:var(--pine-deep);color:#fff;display:flex;align-items:center;justify-content:center;
+  transition:transform .2s ease, background .2s ease;
+}
+.service-plus svg{width:22px;height:22px;}
+.service-card:hover .service-plus, .service-card:focus-within .service-plus{background:var(--pine);}
+details[open] .service-plus{transform:rotate(45deg);}
+.service-body{padding:0 24px 26px 84px;color:var(--ink-soft);font-size:.98rem;}
+.service-body p{margin:0 0 12px;}
+.service-body p:last-child{margin-bottom:0;}
+@media (max-width: 720px){
+  .service-body{padding-left:24px;}
+}
+
+/* Priser og tilskud */
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.info-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;
+  display:flex;flex-direction:column;
+}
+.info-card h3{font-size:1.4rem;margin-bottom:16px;}
+.info-card p{color:var(--ink-soft);font-size:1.15rem;margin:0 0 14px;flex-grow:0;}
+.info-card ul{margin:0 0 16px;padding-left:22px;color:var(--ink-soft);font-size:1.13rem;}
+.info-card li{margin-bottom:6px;}
+.info-card .card-link{margin-top:auto;font-weight:600;font-size:.96rem;text-decoration:none;
+  display:inline-flex;align-items:center;gap:6px;}
+.info-card .card-link svg{width:16px;height:16px;}
+
+/* Kontakt */
+.contact-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:start;}
+.contact-block{margin-bottom:30px;}
+.contact-block h3{font-size:1.2rem;color:var(--ink);font-family:"Source Sans 3",sans-serif;font-weight:700;margin-bottom:10px;}
+.contact-block a{font-size:1.4rem;text-decoration:none;font-weight:600;}
+.contact-block a:hover{text-decoration:underline;}
+.contact-block p{color:var(--ink-soft);margin:4px 0 0;}
+.map-frame{
+  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  height:360px;background:var(--paper-deep);
+}
+.map-frame iframe{width:100%;height:100%;border:0;}
+
+/* Footer (alle sider) */
+footer{
+  border-top:1px solid var(--line);padding:36px 0;background:var(--paper-deep);
+}
+.footer-row{
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;
+  font-size:.92rem;color:var(--ink-soft);
+}
+.footer-row a{color:var(--ink-soft);}
+
+@media (max-width: 880px){
+  .hero-grid, .about-grid, .contact-grid{grid-template-columns:1fr;}
+  .hero-art{order:-1;max-width:280px;margin:0 auto;}
+  .service-grid{grid-template-columns:repeat(2,1fr);}
+  .info-grid{grid-template-columns:1fr;}
+  .trust-strip ul{flex-direction:column;}
+}
+@media (max-width: 720px){
+  nav.primary{
+    position:fixed;inset:64px 0 0 0;background:var(--paper);
+    flex-direction:column;align-items:flex-start;padding:24px 28px;gap:6px;
+    transform:translateX(100%);transition:transform .25s ease;border-top:1px solid var(--line);
+  }
+  nav.primary.open{transform:translateX(0);}
+nav.primary a{
+  text-decoration:none;color:var(--ink);font-size:1.15rem;font-weight:500;
+  padding:10px 4px;border-bottom:2px solid transparent;
+}
+.call-btn{
+  background:var(--pine-deep);color:#fff !important;padding:15px 26px;
+  border-radius:var(--radius);font-weight:600;border-bottom:none !important;
+  white-space:nowrap;font-size:1.1rem;
+}
+  .menu-toggle{display:block;}
+  .service-grid{grid-template-columns:1fr;}
+  .service-body{padding-left:24px;}
+  body{font-size:20px;}
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *{transition:none !important;}
+}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;}
+
+/* Sprogskift DA / EN */
+.lang-switch{
+  display:flex;border:1px solid var(--line);border-radius:20px;overflow:hidden;flex:none;
+}
+.lang-btn{
+  border:none;background:var(--card);color:var(--ink-soft);font-weight:700;font-size:1rem;
+  padding:10px 16px;cursor:pointer;font-family:"Source Sans 3",sans-serif;
+}
+.lang-btn.active{background:var(--pine-deep);color:#fff;}
+.lang-btn:not(.active):hover{background:var(--paper-deep);color:var(--ink);}
+.lang-btn:focus-visible{outline:3px solid var(--gold);outline-offset:-3px;}
+
+.map-frame #map{width:100%;height:100%;}
+.map-frame .leaflet-control-attribution{font-size:.7rem;}
+

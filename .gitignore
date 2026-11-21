@@ -1,0 +1,29 @@
+# Operativsystem
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# Miljøvariabler og hemmeligheder
+.env
+.env.*
+*.pem
+*.key
+
+# Logfiler
+*.log
+npm-debug.log*
+
+# Afhængigheder og build
+node_modules/
+dist/
+build/
+
+# Midlertidige filer
+*.tmp
+*.bak
+EOF

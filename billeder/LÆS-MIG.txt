@@ -1,0 +1,22 @@
+Sådan tilføjer du medarbejderbilleder
+======================================
+
+Læg jeres billeder i denne mappe (billeder/) med PRÆCIS disse filnavne,
+så erstatter de automatisk pladsholderne på hjemmesiden:
+
+  jesper-holmstrom.jpg
+  stine-broberg-nielsen.jpg
+
+Anbefalinger til billederne:
+- Format: JPG eller PNG
+- Kvadratisk billede (fx 600x600 px), ansigtet centreret
+- Filstørrelse: helst under 300 KB, så siden loader hurtigt
+- God, jævn belysning - gerne samme baggrund/stil på begge billeder
+
+Når billederne ligger i mappen, skal du i index.html finde kommentaren
+"Billede tilføjes" ved hver medarbejder og udkommentere/indsætte:
+
+  <img src="billeder/jesper-holmstrom.jpg" alt="Jesper Holmstrøm">
+
+i stedet for det stiplede ikon. Vil du have hjælp til selve indsætningen,
+så send mig besked, når billederne er lagt i mappen.
