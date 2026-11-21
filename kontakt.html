@@ -7,7 +7,7 @@
 <meta name="description" content="" data-i18n-attr="content:meta.kontakt.desc">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -67,11 +67,19 @@
           </div>
         </div>
        <div class="map-frame">
-  <div id="map" role="img" aria-label="Kort over klinikkens placering" data-i18n-attr="aria-label:kontakt.mapTitle"></div>
-</div>
+        <iframe
+          title="Kort over klinikkens placering"
+          src="https://www.google.com/maps?q=N%C3%B8rrebrogade+153,+2200+K%C3%B8benhavn+N&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen>
+        </iframe>
+      </div>
+      </div>
     </div>
   </section>
 </main>
+
 <footer>
   <div class="wrap footer-row">
     <span data-i18n-html="footer.copyright"></span>
@@ -84,4 +92,4 @@
 <script src="script.js"></script>
 <script src="map.js"></script>
 </body>
-</html
+</html>

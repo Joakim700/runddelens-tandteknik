@@ -7,11 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const lng = 12.548185;
 
   const map = L.map("map", { scrollWheelZoom: false }).setView([lat, lng], 17);
-
+  
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 19,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-bidragydere'
-  }).addTo(map);
+  maxZoom: 19,
+  referrerPolicy: "origin",
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-bidragydere'
+}).addTo(map);
 
   L.marker([lat, lng]).addTo(map)
     .bindPopup("Runddelens Tandteknik<br>Nørrebrogade 153, 2200 København N")
